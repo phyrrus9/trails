@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AA5628AB17298B28002407B5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5628AA17298B28002407B5 /* main.cpp */; };
 		AA5628AD17298B28002407B5 /* trails.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA5628AC17298B28002407B5 /* trails.1 */; };
+		AA5628B517298C84002407B5 /* globaldata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5628B417298C84002407B5 /* globaldata.cpp */; };
+		AA5628B817299BB7002407B5 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5628B717299BB7002407B5 /* engine.cpp */; };
+		AA68D35D172AB8C000AA4B76 /* userinterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA68D35B172AB8C000AA4B76 /* userinterface.cpp */; };
+		AA68D360172ABAB200AA4B76 /* travelprobabillity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA68D35E172ABAB200AA4B76 /* travelprobabillity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +32,14 @@
 		AA5628A717298B28002407B5 /* trails */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = trails; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5628AA17298B28002407B5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA5628AC17298B28002407B5 /* trails.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = trails.1; sourceTree = "<group>"; };
+		AA5628B417298C84002407B5 /* globaldata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globaldata.cpp; sourceTree = "<group>"; };
+		AA5628B617299B61002407B5 /* engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		AA5628B717299BB7002407B5 /* engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cpp; sourceTree = "<group>"; };
+		AA5628B91729A652002407B5 /* globaldata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globaldata.h; sourceTree = "<group>"; };
+		AA68D35B172AB8C000AA4B76 /* userinterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = userinterface.cpp; sourceTree = "<group>"; };
+		AA68D35C172AB8C000AA4B76 /* userinterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userinterface.h; sourceTree = "<group>"; };
+		AA68D35E172ABAB200AA4B76 /* travelprobabillity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = travelprobabillity.cpp; sourceTree = "<group>"; };
+		AA68D35F172ABAB200AA4B76 /* travelprobabillity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = travelprobabillity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,15 @@
 		AA5628A917298B28002407B5 /* trails */ = {
 			isa = PBXGroup;
 			children = (
+				AA5628B717299BB7002407B5 /* engine.cpp */,
+				AA5628B617299B61002407B5 /* engine.h */,
+				AA5628B91729A652002407B5 /* globaldata.h */,
+				AA68D35B172AB8C000AA4B76 /* userinterface.cpp */,
+				AA68D35C172AB8C000AA4B76 /* userinterface.h */,
 				AA5628AA17298B28002407B5 /* main.cpp */,
+				AA68D35E172ABAB200AA4B76 /* travelprobabillity.cpp */,
+				AA68D35F172ABAB200AA4B76 /* travelprobabillity.h */,
+				AA5628B417298C84002407B5 /* globaldata.cpp */,
 				AA5628AC17298B28002407B5 /* trails.1 */,
 			);
 			path = trails;
@@ -118,6 +138,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5628AB17298B28002407B5 /* main.cpp in Sources */,
+				AA5628B517298C84002407B5 /* globaldata.cpp in Sources */,
+				AA5628B817299BB7002407B5 /* engine.cpp in Sources */,
+				AA68D35D172AB8C000AA4B76 /* userinterface.cpp in Sources */,
+				AA68D360172ABAB200AA4B76 /* travelprobabillity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +240,7 @@
 				AA5628B217298B28002407B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
