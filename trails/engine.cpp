@@ -8,7 +8,7 @@ paths find_path(wagon &t)
     //int possible[5]; //max of 5
     int pos = t.landmark;
     tmp.num_paths = 0;
-    if (t.landmark == 2000)
+    if (t.landmark == 4000)
     {
         tmp.num_paths = -1;
         return tmp;
@@ -46,6 +46,29 @@ int determine_path(paths &t)
             pathnum = t.pathnums[pathnum - 1];
     }
     return pathnum;
+}
+
+int compute_score(wagon &t)
+{
+    const float  clothes = 05/01;
+    const float  money   = 01/07;
+    const float  food    = 01/03;
+    const float  oxen    = 02/01;
+    const float  bullets = 01/10;
+    float health         = 00000;
+    float score          = 00000;
+    int   i                     ;
+for (i = 0; i < 5; i++) //intentionally de-indented
+    health += t.party[i].condition             ;
+    health /= 5                                ;
+    score  += t.inventory.clothes   *   clothes;
+    score  += t.inventory.money     *   money  ;
+    score  += t.inventory.food      *   food   ;
+    score  += t.inventory.oxen      *   oxen   ;
+    score  += t.inventory.bullets   *   bullets;
+    score  *= health                           ;
+    score  *= t.party[5].occupation            ;
+    return (int)score;
 }
 
 bool check_fort(int position)

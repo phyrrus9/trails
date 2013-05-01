@@ -17,11 +17,11 @@ char * getcondition(int condition, bool total = false, wagon *mywagon = NULL)
      */
     if (total)
     {
-        int totalcondition = 0;
+        float totalcondition = 0;
         for (int i = 0; i < 5; i++)
             totalcondition += mywagon->party[i].condition;
         totalcondition /= 5;
-        switch (totalcondition)
+        switch ((int)totalcondition)
         {
             case 0:
             case 1:
@@ -30,14 +30,14 @@ char * getcondition(int condition, bool total = false, wagon *mywagon = NULL)
                 break;
             case 3:
             case 4:
+            case 5:
                 return (char *)"poor";
                 break;
-            case 5:
             case 6:
             case 7:
+            case 8:
                 return (char *)"fair";
                 break;
-            case 8:
             case 9:
                 return (char *)"good";
                 break;
@@ -96,4 +96,6 @@ void showstats(wagon &mywagon)
     printf("You     : condition: %-9s\n", getcondition(mywagon.party[5].condition));
     printf("Food: %d   Total condition: %-9s Bullets: %d\n", mywagon.inventory.food,
            getcondition(0, true, &mywagon), mywagon.inventory.bullets);
+    printf("Location: %d Clothes: %d Computed score: %d\n", mywagon.landmark, mywagon.inventory.clothes,
+           compute_score(mywagon));
 }
